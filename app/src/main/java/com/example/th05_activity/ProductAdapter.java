@@ -51,9 +51,6 @@ public class ProductAdapter extends BaseAdapter {
         TextView txtName = view.findViewById(R.id.txtName);
         TextView txtPrice = view.findViewById(R.id.txtPrice);
         ImageView btnPlus = view.findViewById(R.id.btnPlus);
-//        btnPlus.setOnClickListener(e -> {
-//            Intent intent = new Intent(MainActivity.this, )
-//        });
 
         Product product = productList.get(i);
         txtName.setText(product.getName());
