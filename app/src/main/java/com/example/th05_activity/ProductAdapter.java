@@ -1,11 +1,13 @@
 package com.example.th05_activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -48,6 +50,10 @@ public class ProductAdapter extends BaseAdapter {
         ImageView imgPicture = view.findViewById(R.id.imgAnh);
         TextView txtName = view.findViewById(R.id.txtName);
         TextView txtPrice = view.findViewById(R.id.txtPrice);
+        ImageView btnPlus = view.findViewById(R.id.btnPlus);
+//        btnPlus.setOnClickListener(e -> {
+//            Intent intent = new Intent(MainActivity.this, )
+//        });
 
         Product product = productList.get(i);
         txtName.setText(product.getName());
@@ -62,6 +68,9 @@ public class ProductAdapter extends BaseAdapter {
         } else {
             constraintLayout.setBackgroundColor(Color.rgb(244, 221, 221));
         }
+
+
         return view;
+
     }
 }
