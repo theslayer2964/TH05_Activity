@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Welcome, Jala!"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Choice your Best food"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/txtSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Search food"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btnDonut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint=" #F1B000"
+        android:text="Donut"
+        app:layout_constraintStart_toStartOf="@+id/txtSearch"
+        app:layout_constraintTop_toBottomOf="@+id/txtSearch" />
+
+    <Button
+        android:id="@+id/btnPink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:backgroundTint="#C4C4C4 "
+        android:text="Pink Donut"
+        android:textAllCaps="false"
+        android:textColor="#070707"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDonut"
+        app:layout_constraintStart_toEndOf="@+id/btnDonut"
+        app:layout_constraintTop_toTopOf="@+id/btnDonut"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnFoat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#C4C4C4 "
+        android:text="Floating"
+        android:textAllCaps="false"
+        android:textColor="#020202"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnPink"
+        app:layout_constraintTop_toTopOf="@+id/btnPink" />
+
+    <ListView
+        android:id="@+id/layout01"
+        android:layout_width="409dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPink" />
+</androidx.constraintlayout.widget.ConstraintLayout>
