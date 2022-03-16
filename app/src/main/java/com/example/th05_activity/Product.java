@@ -1,6 +1,8 @@
 package com.example.th05_activity;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
     private int picture;
     private String name;
     private double price;

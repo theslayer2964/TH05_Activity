@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import java.io.Serializable;
 import java.util.List;
 
 public class ProductAdapter extends BaseAdapter {
@@ -56,9 +57,16 @@ public class ProductAdapter extends BaseAdapter {
         txtName.setText(product.getName());
         txtPrice.setText(String.valueOf(product.getPrice()));
         imgPicture.setImageResource(product.getPicture());
-        view.setOnClickListener(e -> {
-            Toast.makeText(context, "" + product.getName(), Toast.LENGTH_SHORT).show();
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context, "" + product.getName(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context,MainActivity2.class);
+                intent.putExtra("s" ,(Serializable) product);
+                context.startActivity(intent);
+            }
         });
+
         final ConstraintLayout constraintLayout = view.findViewById(R.id.layoutOneLine);
         if (positionSelected == i) {
             constraintLayout.setBackgroundColor(Color.rgb(241, 176, 0));

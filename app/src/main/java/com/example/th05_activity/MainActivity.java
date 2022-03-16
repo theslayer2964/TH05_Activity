@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         btnDonut = findViewById(R.id.btnDonut);
         btnFloat = findViewById(R.id.btnFoat);
         btnPinkDonut = findViewById(R.id.btnPink);
@@ -39,12 +40,20 @@ public class MainActivity extends AppCompatActivity {
         lvProducts = findViewById(R.id.layout01);
 
         products = new ArrayList<>();
-        products.add(new Product(R.drawable.yellow,"Tasty Donut",10.00,"xxx"));
-        products.add(new Product(R.drawable.pink,"Pink Donut",20.00,"xxx"));
-        products.add(new Product(R.drawable.green,"Float Donut",30.00,"xxx"));
-        products.add(new Product(R.drawable.red,"Tasty Donut",40.00,"xxx"));
+        products.add(new Product(R.drawable.yellow,"Tasty Donut",10.00,
+                "Order a Large Pizza but the size is the equivalent of a medium/small from other places at the same price range."));
+        products.add(new Product(R.drawable.pink,"Pink Donut",20.00,
+                "Order a Large Pizza but the size is the equivalent of a medium/small from other places at the same price range."));
+        products.add(new Product(R.drawable.green,"Float Donut",30.00,"Order a Large Pizza but the size is the equivalent of a medium/small from other places at the same price range."));
+        products.add(new Product(R.drawable.red,"Tasty Donut",40.00,
+                "Order a Large Pizza but the size is the equivalent of a medium/small from other places at the same price range."));
 
-        listChuaXoa = new ArrayList<>(products);
+        listChuaXoa = new ArrayList<>();
+        listChuaXoa.add(new Product(R.drawable.yellow,"Tasty Donut",10.00,
+                "Order a Large Pizza but the size is the equivalent of a medium/small from other places at the same price range."));
+        listChuaXoa.add(new Product(R.drawable.pink,"Pink Donut",20.00,"Order a Large Pizza but the size is the equivalent of a medium/small from other places at the same price range."));
+        listChuaXoa.add(new Product(R.drawable.green,"Float Donut",30.00,"Order a Large Pizza but the size is the equivalent of a medium/small from other places at the same price range."));
+        listChuaXoa.add(new Product(R.drawable.red,"Tasty Donut",40.00,"Order a Large Pizza but the size is the equivalent of a medium/small from other places at the same price range."));
         productAdapter = new ProductAdapter(this,R.layout.one_product,products);
         lvProducts.setAdapter(productAdapter);
 
@@ -59,7 +68,8 @@ public class MainActivity extends AppCompatActivity {
                 if(txtSearch.getText().toString().isEmpty() && products.size()==1){
                     Toast.makeText(MainActivity.this, "Do DO DO", Toast.LENGTH_SHORT).show();
                     products.clear();
-                    for (Product p:listChuaXoa) {
+                    for (Product p:listChuaXoa
+                         ) {
                         products.add(p);
                     }
                     productAdapter.notifyDataSetChanged();

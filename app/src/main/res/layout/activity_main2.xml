@@ -7,7 +7,7 @@
     tools:context=".MainActivity2">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgPicture2"
         android:layout_width="319dp"
         android:layout_height="179dp"
         android:layout_marginStart="16dp"
@@ -20,15 +20,15 @@
         app:srcCompat="@drawable/green" />
 
     <TextView
-        android:id="@+id/txtNameDetail"
+        android:id="@+id/txtName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="TextView"
         android:textSize="24dp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintStart_toStartOf="@+id/imgPicture2"
+        app:layout_constraintTop_toBottomOf="@+id/imgPicture2" />
 
     <TextView
         android:id="@+id/textView6"
@@ -36,17 +36,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="Spicy tasty donut family"
-        app:layout_constraintStart_toStartOf="@+id/txtNameDetail"
-        app:layout_constraintTop_toBottomOf="@+id/txtNameDetail" />
+        app:layout_constraintStart_toStartOf="@+id/txtName2"
+        app:layout_constraintTop_toBottomOf="@+id/txtName2" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/txtPrice2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="20.00"
         android:textSize="24dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imgPicture2"
         app:layout_constraintTop_toTopOf="@+id/textView6" />
 
     <TextView
@@ -56,9 +56,9 @@
         android:text="$ "
         android:textSize="24dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView7"
-        app:layout_constraintEnd_toStartOf="@+id/textView7"
-        app:layout_constraintTop_toTopOf="@+id/textView7" />
+        app:layout_constraintBottom_toBottomOf="@+id/txtPrice2"
+        app:layout_constraintEnd_toStartOf="@+id/txtPrice2"
+        app:layout_constraintTop_toTopOf="@+id/txtPrice2" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -97,7 +97,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/textView11"
-        app:layout_constraintEnd_toEndOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="@+id/txtPrice2"
         app:layout_constraintTop_toTopOf="@+id/textView11"
         app:srcCompat="@drawable/add" />
 
